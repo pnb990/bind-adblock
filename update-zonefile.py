@@ -237,10 +237,10 @@ def reload_zone(origin, views):
     if views:
         for v in views.split():
             print ("view {}, {} ".format(v, origin), end='', flush=True)
-            rndc_reload( ['rndc', 'reload', origin, "IN", v] )
+            rndc_reload( ['/usr/sbin/rndc', 'reload', origin, "IN", v] )
     else:
         print ("{} ".format(origin), end='', flush=True)
-        rndc_reload( ['rndc', 'reload', origin] )
+        rndc_reload( ['/usr/sbin/rndc', 'reload', origin] )
 
 def is_exe(fpath):
     return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
