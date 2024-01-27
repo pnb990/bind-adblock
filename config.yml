@@ -5,7 +5,7 @@ req_timeout_s: 10
 wildcard_block: False
 
 # Cache directory
-cache: '.cache/bind_adblock'
+cache: '/tmp/.cache/bind_adblock'
 
 # Can be either NULL or NXDOMAIN
 blocking_mode: 'NXDOMAIN'
